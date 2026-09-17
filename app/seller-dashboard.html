@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seller Dashboard — Marketplace Growth AI</title>
+<link rel="stylesheet" href="./assets/css/app.css">
+<script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">Marketplace<span>Growth</span>AI</div>
+    <div style="display:flex; align-items:center; gap:16px;">
+      <span id="storeName" class="mono" style="color:var(--text-dim); font-size:14px;"></span>
+      <button id="logoutBtn" class="btn secondary">Chiqish</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid cols-3" style="margin-bottom:24px;">
+      <div class="card"><div class="stat-num" id="skuCount">0</div><div class="stat-label">Jami mahsulot</div></div>
+      <div class="card"><div class="stat-num" id="openCount">0</div><div class="stat-label">Ochiq muammolar</div></div>
+      <div class="card"><div class="stat-num" id="doneCount">0</div><div class="stat-label">Bajarilgan</div></div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px;">
+      <h3 style="margin-top:0;">Mahsulotlar CSV yuklash</h3>
+      <p style="color:var(--text-dim); font-size:14px;">
+        Ustunlar: <code>sku_code, name, price, cost, stock, competitor_price, unanswered_reviews</code>
+      </p>
+      <div class="dropzone" id="dropzone">
+        CSV faylni shu yerga tashlang yoki bosing
+        <input type="file" id="csvFile" accept=".csv" class="hidden">
+      </div>
+      <div id="uploadStatus" style="margin-top:12px;"></div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0;">Hoziroq qilinishi kerak bo'lgan ishlar (Impact x Confidence / Effort)</h3>
+      <table>
+        <thead><tr><th>Ish</th><th>Skor</th><th>Holat</th><th></th></tr></thead>
+        <tbody id="actionsBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="./assets/js/seller.js"></script>
+</body>
+</html>

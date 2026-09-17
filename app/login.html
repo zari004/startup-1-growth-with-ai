@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirish — Marketplace Growth AI</title>
+<link rel="stylesheet" href="./assets/css/app.css">
+<style>
+  .auth-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+  .auth-card { width: 100%; max-width: 380px; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+  .tabs button { flex: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-dim); cursor: pointer; font-family: inherit; }
+  .tabs button.active { background: var(--accent); color: #0d0d0d; border-color: var(--accent); font-weight: 600; }
+  .logo { text-align: center; margin-bottom: 24px; font-weight: 700; font-size: 20px; }
+  .logo span { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="auth-wrap">
+    <div class="auth-card card">
+      <div class="logo">Marketplace<span>Growth</span>AI</div>
+      <div class="tabs">
+        <button id="tabLogin" class="active">Kirish</button>
+        <button id="tabSignup">Ro'yxatdan o'tish</button>
+      </div>
+
+      <div id="msg"></div>
+
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Parol" required>
+        <button class="btn" type="submit" style="width:100%">Kirish</button>
+      </form>
+
+      <form id="signupForm" class="hidden">
+        <input type="text" id="signupName" placeholder="Ismingiz" required>
+        <input type="text" id="signupStore" placeholder="Do'kon nomi (Uzum'dagi)" required>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="password" id="signupPassword" placeholder="Parol (kamida 6 belgi)" required minlength="6">
+        <button class="btn" type="submit" style="width:100%">Ro'yxatdan o'tish</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module">
+    import { signIn, signUp, getCurrentProfile } from './assets/js/auth.js';
+
+    const msg = document.getElementById('msg');
+    function showMsg(text, type = 'error') {
+      msg.innerHTML = `<div class="msg ${type}">${text}</div>`;
+    }
+
+    // Agar allaqachon session bo'lsa — to'g'ridan-to'g'ri dashboard'ga
+    getCurrentProfile().then(profile => {
+      if (profile) {
+        window.location.href = profile.role === 'admin' ? './admin-dashboard.html' : './seller-dashboard.html';
+      }
+    });
+
+    const tabLogin = document.getElementById('tabLogin');
+    const tabSignup = document.getElementById('tabSignup');
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+
+    tabLogin.onclick = () => {
+      tabLogin.classList.add('active'); tabSignup.classList.remove('active');
+      loginForm.classList.remove('hidden'); signupForm.classList.add('hidden');
+      msg.innerHTML = '';
+    };
+    tabSignup.onclick = () => {
+      tabSignup.classList.add('active'); tabLogin.classList.remove('active');
+      signupForm.classList.remove('hidden'); loginForm.classList.add('hidden');
+      msg.innerHTML = '';
+    };
+
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      try {
+        await signIn(loginEmail.value, loginPassword.value);
+        const profile = await getCurrentProfile();
+        window.location.href = profile.role === 'admin' ? './admin-dashboard.html' : './seller-dashboard.html';
+      } catch (err) {
+        showMsg(err.message || 'Kirishda xato yuz berdi');
+      }
+    });
+
+    signupForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      try {
+        await signUp(signupEmail.value, signupPassword.value, signupName.value, signupStore.value);
+        showMsg('Ro\'yxatdan o\'tish muvaffaqiyatli! Endi tizimga kiring.', 'success');
+        tabLogin.click();
+      } catch (err) {
+        showMsg(err.message || 'Ro\'yxatdan o\'tishda xato yuz berdi');
+      }
+    });
+  </script>
+</body>
+</html>
