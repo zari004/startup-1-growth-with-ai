@@ -7,95 +7,232 @@
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+
   <div class="container">
-    <nav>
-      <div class="brand">Marketplace<span>Growth</span>AI</div>
-      <a href="../app/login.html" class="btn secondary">Kirish</a>
+    <nav class="navbar">
+      <div class="brand"><span class="dot"></span> MARKETPLACE GROWTH AI</div>
+      <div class="nav-links">
+        <a href="#muammo">Muammo</a>
+        <a href="#yechim">Yechim</a>
+        <a href="#narxlar">Narxlar</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="../app/login.html" class="btn">Kirish</a>
     </nav>
   </div>
 
   <header class="hero">
-    <div class="container">
-      <h1>Do'koningiz uchun har hafta <span>"shu 5 ta ishni qiling"</span> ro'yxati</h1>
-      <p>Bestats kabi xizmatlar faqat raqam ko'rsatadi. Biz — mahsulotlaringizni tahlil qilib, aniq harakat rejasini beramiz: qaysi narxni o'zgartirish, qaysi mahsulotni to'ldirish, qaysi sharhga javob berish kerak.</p>
-      <div class="actions">
-        <a href="#audit" class="btn">Bepul audit so'rash</a>
-        <a href="#pricing" class="btn secondary">Narxlarni ko'rish</a>
+    <div class="container hero-top">
+      <span class="label">Aniqlik ★ Har hafta</span>
+      <span class="label">Uzum sellerlar uchun</span>
+    </div>
+    <div class="container hero-body">
+      <h1 class="display">Har hafta<br>aniq harakat<br>rejasi</h1>
+      <p class="lead">Bestats kabi xizmatlar faqat raqam ko'rsatadi. Biz — do'koningizni tahlil qilib, "shu 5 ta ishni hoziroq qiling" ro'yxatini beramiz: qaysi narxni o'zgartirish, qaysi mahsulotni to'ldirish, qaysi sharhga javob berish kerak.</p>
+      <div class="hero-actions">
+        <a href="#audit" class="btn accent">Bepul audit olish</a>
+        <a href="#narxlar" class="btn outline">Narxlarni ko'rish</a>
+      </div>
+    </div>
+    <div class="container" style="padding:0;">
+      <div class="stats-row">
+        <div class="stat-cell"><b>18 000+</b><span>Uzum'dagi faol seller</span></div>
+        <div class="stat-cell"><b>Top-5</b><span>haftalik harakat ro'yxati</span></div>
+        <div class="stat-cell"><b>0 dastur</b><span>bilimi shart emas</span></div>
       </div>
     </div>
   </header>
 
-  <section id="problem">
+  <section id="muammo" class="section">
     <div class="container">
-      <h2>Muammo shu</h2>
-      <div class="grid cols-3">
-        <div class="card">
+      <div class="section-head">
+        <span class="label">Muammo</span>
+        <h2 class="display">Nega ko'pchilik<br>do'kon o'sa olmaydi</h2>
+      </div>
+      <div class="grid-3">
+        <div>
+          <span class="num">01</span>
           <h3>Vaqt yo'q</h3>
-          <p>Ko'p sellerlar do'konini ochib qo'yadi va kuzatib bormaydi — narx eskiradi, stock tugaydi, sharhlar javobsiz qoladi.</p>
+          <p>Do'kon "ochib qo'yiladi" va kuzatilmaydi — narx eskiradi, stock tugaydi, sharhlar javobsiz qoladi.</p>
         </div>
-        <div class="card">
+        <div>
+          <span class="num">02</span>
           <h3>Raqam tushunarsiz</h3>
-          <p>Analitika xizmatlari grafik va son beradi, lekin ulardan qanday xarakat qilishni ko'pchilik bilmaydi.</p>
+          <p>Analitika xizmatlari grafik va son beradi, lekin undan qanday harakat qilishni ko'pchilik bilmaydi.</p>
         </div>
-        <div class="card">
+        <div>
+          <span class="num">03</span>
           <h3>Kartochka sifati past</h3>
-          <p>Ko'p mahsulot yomon tavsif/rasm tufayli ko'rinmaydi — lekin seller buni bilmaydi.</p>
+          <p>Ko'p mahsulot yomon tavsif/rasm tufayli ko'rinmaydi — lekin seller buni sezmaydi ham.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="solution">
+  <section id="yechim" class="section">
     <div class="container">
-      <h2>Yechim — ikki bosqich</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>1. Content Factory</h3>
+      <div class="section-head">
+        <span class="label">Yechim</span>
+        <h2 class="display">Ikki bosqichda ishlaymiz</h2>
+      </div>
+      <div class="solution-grid">
+        <div class="solution-card">
+          <span class="big-num">01</span>
+          <span class="num">Tez pul bosqichi</span>
+          <h3>Content Factory</h3>
           <p>Mahsulot kartochkalaringizni professional darajaga olib chiqamiz: SEO sarlavha, tavsif, narx taqqoslash, rasm bo'yicha tavsiya.</p>
+          <div class="tag-row">
+            <span class="tag">SEO SARLAVHA</span>
+            <span class="tag">NARX TAQQOSLASH</span>
+            <span class="tag">RASM TAVSIYASI</span>
+          </div>
         </div>
-        <div class="card">
-          <h3>2. Growth OS</h3>
-          <p>Har hafta do'koningizni AI orqali tahlil qilib, eng muhim 5 ta ishni ro'yxat qilib beramiz: foyda past mahsulotlar, tugagan stock, raqobatchidan qimmat narxlar, javobsiz sharhlar.</p>
+        <div class="solution-card accent">
+          <span class="big-num">02</span>
+          <span class="num">Oylik obuna bosqichi</span>
+          <h3>Growth OS</h3>
+          <p>Har hafta do'koningizni AI orqali tahlil qilib, eng muhim ishlarni ro'yxat qilib beramiz: foyda past mahsulotlar, tugagan stock, raqobatchidan qimmat narxlar, javobsiz sharhlar.</p>
+          <div class="tag-row">
+            <span class="tag">HAFTALIK REPORT</span>
+            <span class="tag">AI TAHLIL</span>
+            <span class="tag">TELEGRAM ORQALI</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="audit">
+  <section class="section">
     <div class="container">
-      <h2>Bepul audit</h2>
-      <div class="card" style="max-width:600px; margin:0 auto; text-align:center;">
-        <p>Do'koningizdan 5 ta muammoni <b>bepul</b> topib beramiz — 15 daqiqa vaqt oladi. CSV export faylingizni yuboring, qolganini biz qilamiz.</p>
-        <a href="https://t.me/" target="_blank" rel="noopener" class="btn">Telegram orqali murojaat qilish</a>
+      <div class="section-head">
+        <span class="label">Qanday ishlaydi</span>
+        <h2 class="display">4 ta qadam</h2>
+      </div>
+      <div class="steps-list">
+        <div class="step">
+          <span class="num">01</span>
+          <div><h4>CSV yuklaysiz</h4><p>Uzum kabinetingizdagi mahsulot ro'yxatini export qilib yuklaysiz — 1 daqiqa.</p></div>
+        </div>
+        <div class="step">
+          <span class="num">02</span>
+          <div><h4>Tizim avtomatik tahlil qiladi</h4><p>Narx, stock, foyda va sharhlar bo'yicha muammolarni aniqlaydi.</p></div>
+        </div>
+        <div class="step">
+          <span class="num">03</span>
+          <div><h4>Top-5 ish ro'yxati chiqadi</h4><p>Impact x Confidence / Effort formulasi bo'yicha eng muhim ishlar birinchi o'ringa chiqadi.</p></div>
+        </div>
+        <div class="step">
+          <span class="num">04</span>
+          <div><h4>Siz bajarasiz, natija ko'rasiz</h4><p>Har hafta yangi ro'yxat — do'koningiz doim nazorat ostida.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="pricing">
+  <section id="audit" class="section">
+    <div class="container" style="text-align:center;">
+      <div class="section-head">
+        <span class="label">Boshlash uchun</span>
+        <h2 class="display">Bepul audit</h2>
+      </div>
+      <p style="color:var(--dim); max-width:520px; margin:0 auto 28px;">Do'koningizdan 5 ta muammoni <b>bepul</b> topib beramiz — 15 daqiqa vaqt oladi. CSV export faylingizni yuboring, qolganini biz qilamiz.</p>
+      <a href="https://t.me/" target="_blank" rel="noopener" class="btn accent">Telegram orqali murojaat qilish</a>
+    </div>
+  </section>
+
+  <section id="narxlar" class="section">
     <div class="container">
-      <h2>Narxlar</h2>
-      <div class="grid cols-3">
-        <div class="card">
+      <div class="section-head">
+        <span class="label">Narxlar</span>
+        <h2 class="display">Sizga mos rejani tanlang</h2>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card">
           <h3>Audit</h3>
-          <div class="price-tag">200 000 - 500 000 <span>so'm / bir martalik</span></div>
-          <p>To'liq do'kon tahlili va tayyor harakat rejasi.</p>
+          <div class="display">200–500K</div>
+          <span class="per">so'm / bir martalik</span>
+          <ul>
+            <li>To'liq do'kon tahlili</li>
+            <li>Tayyor harakat rejasi (PDF)</li>
+            <li>1 marotaba konsultatsiya</li>
+          </ul>
+          <a href="#audit" class="btn outline">Buyurtma berish</a>
         </div>
-        <div class="card">
+        <div class="price-card featured">
+          <span class="badge-top">MASHHUR</span>
           <h3>Starter</h3>
-          <div class="price-tag">490 000 <span>so'm / oy</span></div>
-          <p>Haftalik avtomatik hisobot va Top-5 ish ro'yxati.</p>
+          <div class="display">490K</div>
+          <span class="per">so'm / oy</span>
+          <ul>
+            <li>Haftalik avtomatik hisobot</li>
+            <li>Top-5 ish ro'yxati</li>
+            <li>Telegram orqali xabarnoma</li>
+          </ul>
+          <a href="../app/login.html" class="btn accent">Boshlash</a>
         </div>
-        <div class="card">
+        <div class="price-card">
           <h3>Growth</h3>
-          <div class="price-tag">990 000 <span>so'm / oy</span></div>
-          <p>To'liq monitoring + AI tavsif/SEO/review javob generatsiyasi.</p>
+          <div class="display">990K</div>
+          <span class="per">so'm / oy</span>
+          <ul>
+            <li>To'liq monitoring</li>
+            <li>AI tavsif / SEO generatsiyasi</li>
+            <li>Review javob generatsiyasi</li>
+          </ul>
+          <a href="../app/login.html" class="btn outline">Boshlash</a>
         </div>
       </div>
     </div>
   </section>
 
-  <footer>
-    <div class="container">Marketplace Growth AI — Uzum sellerlar uchun o'sish tizimi</div>
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="label">Savollar</span>
+        <h2 class="display">Ko'p so'raladigan savollar</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary><span><span class="faq-num">01</span>Uzum API kerakmi?</span></summary>
+          <p>Yo'q. Hozircha CSV export faylini yuklaysiz, tizim uni avtomatik tahlil qiladi. Kelajakda Uzum API ochilsa, jarayon to'liq avtomatlashadi.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span><span class="faq-num">02</span>Ma'lumotlarim xavfsizmi?</span></summary>
+          <p>Ha. Har bir sellerning ma'lumoti alohida ajratilgan (Row Level Security) — faqat siz va admin ko'ra oladi.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span><span class="faq-num">03</span>Istalgan vaqt bekor qila olamanmi?</span></summary>
+          <p>Ha, obuna oylik va istalgan vaqt bekor qilinadi, majburiy shartnoma yo'q.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span><span class="faq-num">04</span>Natija qachon ko'rinadi?</span></summary>
+          <p>Birinchi CSV yuklangan zahoti — daqiqalar ichida Top-5 ish ro'yxatini olasiz.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-dark">
+    <div class="container">
+      <span class="label">Tayyor bo'lsangiz</span>
+      <h2 class="display">Do'koningizni <span>hoziroq</span><br>tekshirib ko'ring</h2>
+      <p>Bepul audit orqali 5 ta muammoni ko'ring — hech qanday majburiyat yo'q.</p>
+      <a href="#audit" class="btn accent">Bepul audit olish</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="brand"><span class="dot"></span> MARKETPLACE GROWTH AI</div>
+      <div class="footer-links">
+        <a href="#muammo">Muammo</a>
+        <a href="#yechim">Yechim</a>
+        <a href="#narxlar">Narxlar</a>
+        <a href="../app/login.html">Kirish</a>
+      </div>
+      <div class="copyright">© 2026 Marketplace Growth AI</div>
+    </div>
   </footer>
+
 </body>
 </html>

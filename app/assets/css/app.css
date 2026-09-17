@@ -1,29 +1,40 @@
 /* ============================================================
-   Marketplace Growth AI — umumiy dizayn (portfolio uslubiga mos)
+   Marketplace Growth AI — webapp dizayni (landing bilan bir xil uslub:
+   oq fon, qalin Anton sarlavhalar, apelsin aksent, pill tugmalar)
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  --bg: #0d0d0d;
-  --bg-card: #161616;
-  --border: #2a2a2a;
-  --accent: #b5f542;
-  --text: #f2f2f2;
-  --text-dim: #9a9a9a;
-  --danger: #ff5c5c;
-  --warn: #ffb454;
-  --ok: #4ade80;
-  --radius: 12px;
+  --bg: #ffffff;
+  --bg-card: #ffffff;
+  --bg-soft: #f6f5f2;
+  --border: #e4e2dc;
+  --accent: #ff4d1f;
+  --accent-soft: #ffe6da;
+  --ink: #0a0a0a;
+  --text: #0a0a0a;
+  --text-dim: #6b6b6b;
+  --danger: #e0392c;
+  --warn: #b8710a;
+  --ok: #1f9d55;
+  --radius: 14px;
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: var(--bg-soft);
   color: var(--text);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
   min-height: 100vh;
+}
+
+.display {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
 }
 
 code, .mono { font-family: 'JetBrains Mono', monospace; }
@@ -34,56 +45,59 @@ a { color: var(--accent); text-decoration: none; }
 
 .topbar {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 16px 24px; border-bottom: 1px solid var(--border);
+  padding: 18px 24px; border-bottom: 1px solid var(--border); background: #fff;
 }
-.topbar .brand { font-weight: 700; font-size: 18px; }
+.topbar .brand { font-weight: 800; font-size: 16px; letter-spacing: 0.02em; }
 .topbar .brand span { color: var(--accent); }
 
 .btn {
-  display: inline-block; padding: 10px 18px; border-radius: 999px;
-  background: var(--accent); color: #0d0d0d; font-weight: 600;
-  border: none; cursor: pointer; font-family: inherit; font-size: 14px;
+  display: inline-block; padding: 10px 20px; border-radius: 999px;
+  background: var(--ink); color: #fff; font-weight: 600;
+  border: none; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 14px;
 }
-.btn:hover { opacity: 0.9; }
-.btn.secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn:hover { opacity: 0.88; }
+.btn.accent { background: var(--accent); color: #fff; }
+.btn.secondary { background: transparent; color: var(--ink); border: 1.5px solid var(--border); }
 .btn.danger { background: var(--danger); color: #fff; }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .card {
   background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 20px;
+  border-radius: var(--radius); padding: 22px;
 }
 
 input, select {
-  width: 100%; padding: 10px 12px; border-radius: 8px;
-  border: 1px solid var(--border); background: #0f0f0f; color: var(--text);
-  font-family: inherit; font-size: 14px; margin-bottom: 12px;
+  width: 100%; padding: 11px 12px; border-radius: 8px;
+  border: 1.5px solid var(--border); background: #fff; color: var(--text);
+  font-family: 'Inter', sans-serif; font-size: 14px; margin-bottom: 12px;
 }
+input:focus, select:focus { outline: none; border-color: var(--accent); }
 
 table { width: 100%; border-collapse: collapse; font-size: 14px; }
-th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
-th { color: var(--text-dim); font-weight: 500; text-transform: uppercase; font-size: 12px; letter-spacing: 0.04em; }
+th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+th { color: var(--text-dim); font-weight: 600; text-transform: uppercase; font-size: 11px; letter-spacing: 0.06em; font-family: 'JetBrains Mono', monospace; }
 
-.badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
-.badge.open { background: rgba(255,180,84,0.15); color: var(--warn); }
-.badge.done { background: rgba(74,222,128,0.15); color: var(--ok); }
-.badge.dismissed { background: rgba(154,154,154,0.15); color: var(--text-dim); }
+.badge { display: inline-block; padding: 3px 12px; border-radius: 999px; font-size: 12px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+.badge.open { background: var(--accent-soft); color: #b8390f; }
+.badge.done { background: #e3f6ea; color: var(--ok); }
+.badge.dismissed { background: #f0f0ee; color: var(--text-dim); }
 
 .grid { display: grid; gap: 16px; }
 .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 800px) { .grid.cols-3 { grid-template-columns: 1fr; } }
 
-.stat-num { font-size: 28px; font-weight: 700; }
-.stat-label { color: var(--text-dim); font-size: 13px; }
+.stat-num { font-family: 'Anton', sans-serif; font-size: 32px; text-transform: uppercase; }
+.stat-label { color: var(--text-dim); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; font-family: 'JetBrains Mono', monospace; margin-top: 4px; }
 
 .dropzone {
   border: 2px dashed var(--border); border-radius: var(--radius);
   padding: 40px; text-align: center; color: var(--text-dim); cursor: pointer;
+  background: var(--bg-soft);
 }
-.dropzone:hover, .dropzone.active { border-color: var(--accent); color: var(--text); }
+.dropzone:hover, .dropzone.active { border-color: var(--accent); color: var(--ink); background: var(--accent-soft); }
 
 .msg { padding: 10px 14px; border-radius: 8px; font-size: 14px; margin-bottom: 12px; }
-.msg.error { background: rgba(255,92,92,0.12); color: var(--danger); }
-.msg.success { background: rgba(74,222,128,0.12); color: var(--ok); }
+.msg.error { background: #fdeceb; color: var(--danger); }
+.msg.success { background: #e3f6ea; color: var(--ok); }
 
 .hidden { display: none !important; }

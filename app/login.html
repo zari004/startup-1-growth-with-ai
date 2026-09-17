@@ -10,15 +10,16 @@
   .auth-card { width: 100%; max-width: 380px; }
   .tabs { display: flex; gap: 8px; margin-bottom: 20px; }
   .tabs button { flex: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-dim); cursor: pointer; font-family: inherit; }
-  .tabs button.active { background: var(--accent); color: #0d0d0d; border-color: var(--accent); font-weight: 600; }
-  .logo { text-align: center; margin-bottom: 24px; font-weight: 700; font-size: 20px; }
+  .tabs button.active { background: var(--ink); color: #fff; border-color: var(--ink); font-weight: 600; }
+  .logo { text-align: center; margin-bottom: 24px; font-weight: 800; font-size: 20px; letter-spacing: 0.02em; }
   .logo span { color: var(--accent); }
+  .auth-wrap { background: var(--bg-soft); }
 </style>
 </head>
 <body>
   <div class="auth-wrap">
     <div class="auth-card card">
-      <div class="logo">Marketplace<span>Growth</span>AI</div>
+      <div class="logo"><span style="display:inline-block;width:9px;height:9px;background:var(--accent);border-radius:3px;margin-right:6px;"></span>MARKETPLACE GROWTH AI</div>
       <div class="tabs">
         <button id="tabLogin" class="active">Kirish</button>
         <button id="tabSignup">Ro'yxatdan o'tish</button>

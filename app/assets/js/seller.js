@@ -138,7 +138,7 @@ async function loadActions() {
     const actionsTd = tr.lastElementChild;
     if (a.status === 'open') {
       const doneBtn = document.createElement('button');
-      doneBtn.className = 'btn'; doneBtn.textContent = 'Bajarildi';
+      doneBtn.className = 'btn accent'; doneBtn.textContent = 'Bajarildi';
       doneBtn.onclick = () => updateActionStatus(a.id, 'done');
       const dismissBtn = document.createElement('button');
       dismissBtn.className = 'btn secondary'; dismissBtn.style.marginLeft = '8px';
