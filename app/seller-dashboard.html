@@ -18,9 +18,18 @@
 
   <div class="container">
     <div class="grid cols-3" style="margin-bottom:24px;">
-      <div class="card"><div class="stat-num" id="skuCount">0</div><div class="stat-label">Jami mahsulot</div></div>
-      <div class="card"><div class="stat-num" id="openCount">0</div><div class="stat-label">Ochiq muammolar</div></div>
-      <div class="card"><div class="stat-num" id="doneCount">0</div><div class="stat-label">Bajarilgan</div></div>
+      <div class="card">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73Z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/></svg></div>
+        <div class="stat-num" id="skuCount">0</div><div class="stat-label">Jami mahsulot</div>
+      </div>
+      <div class="card">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
+        <div class="stat-num" id="openCount">0</div><div class="stat-label">Ochiq muammolar</div>
+      </div>
+      <div class="card">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-10 10-3-3"/></svg></div>
+        <div class="stat-num" id="doneCount">0</div><div class="stat-label">Bajarilgan</div>
+      </div>
     </div>
 
     <div class="card" style="margin-bottom:24px;">
@@ -29,6 +38,7 @@
         Ustunlar: <code>sku_code, name, price, cost, stock, competitor_price, unanswered_reviews</code>
       </p>
       <div class="dropzone" id="dropzone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block; margin-left:auto; margin-right:auto;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
         CSV faylni shu yerga tashlang yoki bosing
         <input type="file" id="csvFile" accept=".csv" class="hidden">
       </div>
@@ -37,10 +47,12 @@
 
     <div class="card">
       <h3 style="margin-top:0;">Hoziroq qilinishi kerak bo'lgan ishlar (Impact x Confidence / Effort)</h3>
-      <table>
-        <thead><tr><th>Ish</th><th>Skor</th><th>Holat</th><th></th></tr></thead>
-        <tbody id="actionsBody"></tbody>
-      </table>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Ish</th><th>Skor</th><th>Holat</th><th></th></tr></thead>
+          <tbody id="actionsBody"></tbody>
+        </table>
+      </div>
     </div>
   </div>
 

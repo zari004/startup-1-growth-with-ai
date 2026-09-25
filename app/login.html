@@ -6,14 +6,16 @@
 <title>Kirish — Marketplace Growth AI</title>
 <link rel="stylesheet" href="./assets/css/app.css">
 <style>
-  .auth-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+  .auth-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px; }
   .auth-card { width: 100%; max-width: 380px; }
   .tabs { display: flex; gap: 8px; margin-bottom: 20px; }
-  .tabs button { flex: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-dim); cursor: pointer; font-family: inherit; }
+  .tabs button { flex: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-dim); cursor: pointer; font-family: inherit; transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease; }
+  .tabs button:hover { transform: translateY(-1px); }
   .tabs button.active { background: var(--ink); color: #fff; border-color: var(--ink); font-weight: 600; }
   .logo { text-align: center; margin-bottom: 24px; font-weight: 800; font-size: 20px; letter-spacing: 0.02em; }
   .logo span { color: var(--accent); }
   .auth-wrap { background: var(--bg-soft); }
+  @media (max-width: 420px) { .logo { font-size: 17px; } }
 </style>
 </head>
 <body>
